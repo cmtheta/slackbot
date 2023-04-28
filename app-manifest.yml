@@ -1,0 +1,25 @@
+display_information:
+  name: bot
+  description: for verification at development app
+  background_color: "#000000"
+features:
+  bot_user:
+    display_name: bot
+    always_online: false
+oauth_config:
+  scopes:
+    user:
+      - channels:write.invites
+    bot:
+      - channels:read
+      - chat:write
+      - chat:write.public
+settings:
+  event_subscriptions:
+    bot_events:
+      - channel_created
+  interactivity:
+    is_enabled: true
+  org_deploy_enabled: false
+  socket_mode_enabled: true
+  token_rotation_enabled: false
