@@ -51,7 +51,7 @@ def error_message():
             text="処理エラーが発生しました。",
         )
     except Exception as e:
-        logging.exception('Raise Exception: %s', )
+        logging.exception('Raise Exception: %s', e)
 
 
 handler = SocketModeHandler(app, SLACK_APP_TOKEN)
