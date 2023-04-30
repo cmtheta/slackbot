@@ -13,7 +13,7 @@ app = App(token=SLACK_BOT_TOKEN)
 client = WebClient(token=SLACK_BOT_TOKEN)
 
 logging.basicConfig(
-    filename="logging.log",
+    filename="log/logging.log",
     level=logging.DEBUG,
     format="(%(asctime)s)[%(levelname)s] %(message)s",
     datefmt="%m/%d/%Y %I:%M:%S %p"
