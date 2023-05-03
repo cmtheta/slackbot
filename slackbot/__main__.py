@@ -48,7 +48,7 @@ def error_message():
     try:
         client.chat_postMessage(
             channel=post_channel,
-            text="処理エラーが発生しました。",
+            text="処理中にエラーが発生しました。",
         )
     except Exception as e:
         logging.exception('Raise Exception: %s', e)
