@@ -1,6 +1,6 @@
 display_information:
   name: bot
-  description: for verification at development app
+  description: slack bot
   background_color: "#000000"
 features:
   bot_user:
@@ -8,8 +8,6 @@ features:
     always_online: false
 oauth_config:
   scopes:
-    user:
-      - channels:write.invites
     bot:
       - channels:read
       - chat:write
