@@ -38,6 +38,7 @@ def chennel_created(event):
 
 # >>> daily massage
 daily_message = DailyMessage(client=client, post_channel=POST_CHANNEL_ID)
+# schedule.every(10).seconds.do(daily_message.send)
 schedule.every().day.at("08:00").do(daily_message.send)
 # <<< daily massage
 
