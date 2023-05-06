@@ -15,7 +15,7 @@ class DailyMessage:
         try:
             self.client.chat_postMessage(
                 channel=self.post_channel,
-                text="HELLO!",
+                text=self.count_down_text(),
                 blocks=self.make_block()
             )
         except Exception as e:
@@ -45,6 +45,15 @@ class DailyMessage:
                 }
 
     def make_count_down_block(self):
+        return {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": self.count_down_text()
+            }
+        }
+
+    def count_down_text(self):
         now = datetime.now()
         gap = datetime(year=2023, month=7, day=5, hour=14) - now
         if gap.days == 0:
@@ -62,13 +71,7 @@ class DailyMessage:
         else:
             msg =  f"JANOG52まで 残り{gap.days}日"
 
-        return {
-            "type": "section",
-            "text": {
-                "type": "mrkdwn",
-                "text": msg
-            }
-        }
+        return msg
 
     def make_quote_blocks(self):
         blocks = []
@@ -96,4 +99,5 @@ class DailyMessage:
         return selected_quotes
 
     def regist_msg(self):
+        # TODO: 参加者が自由にメッセージを投稿できるようにする。
         pass
