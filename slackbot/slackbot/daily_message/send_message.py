@@ -36,6 +36,7 @@ class DailyMessage:
 
     def make_block(self, quote, today):
         greeting = f"おはようございます。今日は{today}です。"
+        # message: JANOG52まで残り〜日
         blocks = [
             {
                 "type": "section",
