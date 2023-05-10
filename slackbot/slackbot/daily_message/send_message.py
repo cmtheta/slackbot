@@ -35,7 +35,7 @@ class DailyMessage:
 
     def make_greeting_block(self):
         today = date.today().strftime('%Y年%m月%d日(%a)')
-        greeting = f"おはようございます。今日は{today}です。"
+        greeting = f"今日は{today}です。"
         return {
                 "type": "section",
                 "text": {
